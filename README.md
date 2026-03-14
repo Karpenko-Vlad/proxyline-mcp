@@ -25,14 +25,28 @@ MCP server that wraps the [Proxyline](https://panel.proxyline.net) proxy provide
 
 ## Setup
 
+### Via npx (no installation needed)
+
+```json
+{
+  "mcpServers": {
+    "proxyline": {
+      "command": "npx",
+      "args": ["-y", "proxytline-mcp"],
+      "env": {
+        "PROXYLINE_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+```
+
+### From source
+
 ```bash
 npm install
 npm run build
 ```
-
-## Configuration
-
-Add to your MCP client config (e.g. `~/.claude/settings.json`):
 
 ```json
 {
